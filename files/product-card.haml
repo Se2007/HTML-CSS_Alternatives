@@ -1,0 +1,121 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %title Product Card - Haml
+    %style
+      :plain
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f3f4f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+
+        .card {
+          position: relative;
+          width: 320px;
+          background-color: #ffffff;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        .badge {
+          display: inline-block;
+          background-color: #ef4444;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 4px 10px;
+          border-radius: 9999px;
+          margin-bottom: 12px;
+        }
+
+        .card-body {
+          padding: 16px;
+        }
+
+        .card-title {
+          font-size: 18px;
+          font-weight: bold;
+          color: #111827;
+          margin-bottom: 8px;
+        }
+
+        .card-description {
+          font-size: 14px;
+          color: #6b7280;
+          line-height: 1.5;
+          margin-bottom: 16px;
+        }
+
+        .card-meta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 12px;
+        }
+
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+          color: #111827;
+        }
+
+        .rating {
+          font-size: 14px;
+          color: #f59e0b;
+          font-weight: 600;
+        }
+
+        .tags {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 16px;
+        }
+
+        .tag {
+          font-size: 12px;
+          color: #2563eb;
+          background-color: #dbeafe;
+          padding: 4px 10px;
+          border-radius: 6px;
+        }
+
+        .btn-primary {
+          width: 100%;
+          background-color: #2563eb;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 10px 0;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+  %body
+    .card
+      .card-body
+        %span.badge New
+        %h2.card-title Wireless Headphones
+        %p.card-description
+          Premium sound quality with active noise cancellation and 30-hour battery life.
+
+        .card-meta
+          %span.price $129.00
+          %span.rating ★ 4.8
+
+        .tags
+          %span.tag Audio
+          %span.tag Wireless
+
+        %button.btn-primary Add to Cart

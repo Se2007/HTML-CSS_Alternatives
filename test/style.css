@@ -1,0 +1,57 @@
+/* Simple class selectors — should be converted correctly */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    color: #111111;
+}
+
+.card {
+    width: 300px;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+/* Pseudo-class — should be silently skipped (doesn't affect static look) */
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Compound selector — should be skipped with a warning */
+.btn.primary {
+    background-color: green;
+}
+
+/* Descendant selector — should be skipped with a warning */
+.card .title {
+    font-weight: 900;
+}
+
+/* ID selector — should be skipped with a warning */
+#header {
+    display: block;
+    position: sticky;
+}
+
+/* Multiple comma-separated selectors — each handled independently */
+.footer, .sidebar {
+    display: block;
+    text-align: left;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Card - UnoCSS (Attributify Mode)</title>
+  <script>
+    window.__unocss = {
+      presets: [
+        () => import('https://esm.sh/@unocss/preset-uno').then(m => m.default()),
+        () => import('https://esm.sh/@unocss/preset-attributify').then(m => m.default())
+      ]
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+</head>
+<body font="sans" bg="gray-100" flex justify="center" items="center" min-h="screen">
+
+  <div relative w="80" bg="white" rounded="xl" shadow="lg" overflow="hidden">
+    <div p="4">
+      <span inline-block bg="red-500" text="white xs" font="bold" p="x-2.5 y-1" rounded="full" mb="3">New</span>
+      <h2 text="lg gray-900" font="bold" mb="2">Wireless Headphones</h2>
+      <p text="sm gray-500" leading="relaxed" mb="4">
+        Premium sound quality with active noise cancellation and 30-hour battery life.
+      </p>
+
+      <div flex justify="between" items="center" mb="3">
+        <span text="xl gray-900" font="bold">$129.00</span>
+        <span text="sm amber-500" font="semibold">★ 4.8</span>
+      </div>
+
+      <div flex gap="2" mb="4">
+        <span text="xs blue-600" bg="blue-100" p="x-2.5 y-1" rounded="md">Audio</span>
+        <span text="xs blue-600" bg="blue-100" p="x-2.5 y-1" rounded="md">Wireless</span>
+      </div>
+
+      <button w="full" bg="blue-600" text="white sm" font="bold" p="y-2.5" rounded="lg" border="none" cursor="pointer">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
