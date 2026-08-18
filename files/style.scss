@@ -1,0 +1,132 @@
+// ==========================================================
+// Variables (متغیرها)
+// ==========================================================
+$color-bg: #f3f4f6;
+$color-white: #ffffff;
+$color-dark: #111827;
+$color-gray: #6b7280;
+$color-red: #ef4444;
+$color-blue: #2563eb;
+$color-blue-light: #dbeafe;
+$color-yellow: #f59e0b;
+
+$radius-lg: 12px;
+$radius-md: 8px;
+$radius-sm: 6px;
+$radius-pill: 9999px;
+
+$card-width: 320px;
+$font-base: Arial, sans-serif;
+
+// ==========================================================
+// Mixin (تابع کمکی برای فلکس‌باکس)
+// ==========================================================
+@mixin flex($justify: flex-start, $align: stretch) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// ==========================================================
+// Reset
+// ==========================================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-base;
+  background-color: $color-bg;
+  min-height: 100vh;
+  @include flex(center, center);
+}
+
+// ==========================================================
+// Card
+// ==========================================================
+.card {
+  position: relative;
+  width: $card-width;
+  background-color: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  .badge {
+    display: inline-block;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: $radius-pill;
+    margin-bottom: 12px;
+  }
+
+  &-body {
+    padding: 16px;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-dark;
+    margin-bottom: 8px;
+  }
+
+  &-description {
+    font-size: 14px;
+    color: $color-gray;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  &-meta {
+    @include flex(space-between, center);
+    margin-bottom: 12px;
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-dark;
+    }
+
+    .rating {
+      font-size: 14px;
+      color: $color-yellow;
+      font-weight: 600;
+    }
+  }
+}
+
+.tags {
+  @include flex;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  .tag {
+    font-size: 12px;
+    color: $color-blue;
+    background-color: $color-blue-light;
+    padding: 4px 10px;
+    border-radius: $radius-sm;
+  }
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: $color-blue;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1d4ed8;
+  }
+}

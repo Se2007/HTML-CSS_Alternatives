@@ -1,14 +1,6 @@
 papers/
 saved_model/
+node_modules/
 
-__pycache__/
 
-
-RARE25-train-data/
-EVC_Barretts_FullSet/
-
-*.rar
-*.zip
-*.csv
-
-*.png
+.DS_Store

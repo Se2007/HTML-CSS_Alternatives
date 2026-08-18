@@ -1,0 +1,11 @@
+Framework / Alternative,Files Included,Lines,Chars,GPT-4 Tokens,GPT-4o Tokens,Code-LLM Tokens,Char/Token Ratio,Nesting Depth,Total Classes,Unique Classes,Redundancy Ratio,Entropy
+Baseline (HTML+CSS),index.html,114,2553,754,753,802,3.39,7,12,11,0.7676,6.1036
+Tailwind CSS,tailwind.html,30,1370,393,391,420,3.5,7,64,43,0.6343,6.4172
+UnoCSS (Attributify),unocss.html,38,1604,523,518,550,3.1,7,0,0,0.6506,6.554
+Bootstrap,bootstrap.html,55,1675,487,486,506,3.45,7,35,26,0.6276,6.7213
+Daisy UI,daisyui.html,29,1258,352,350,366,3.59,7,45,35,0.5514,6.582
+Vanilla Extract (TSX + CSS.TS),"main.ts, styles.css.ts",110,2796,803,822,842,3.4,5,12,11,0.7397,6.4612
+Open Props,open_props.html,115,3051,856,854,866,3.57,7,12,11,0.7927,6.1269
+Formantic UI,fomanticui.html,43,1309,378,375,387,3.49,8,30,18,0.584,6.3721
+HAML,haml.haml,105,2476,676,677,724,3.66,1,0,0,0.74,5.9978
+Pug,pug.pug,105,2472,662,662,710,3.73,1,0,0,0.7372,5.9756
